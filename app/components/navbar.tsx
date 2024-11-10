@@ -32,7 +32,7 @@ export default function MyNavbar() {
           className="sm:hidden"
         />
         <NavbarBrand className="ml-4"> 
-          <p className="font-bold text-inherit">Kpsbathla</p>
+          <p className="font-bold text-inherit"><Link href="./">Kpsbathla</Link></p>
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent className="hidden sm:flex gap-20 justify-center flex-grow">
