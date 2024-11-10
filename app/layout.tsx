@@ -31,12 +31,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable}  antialiased`}
         >
+      
+        <Providers>
+        <MyNavbar/>
           <div className="-z-10">
           <Particlebackground/>
           </div>
-        {" "}
-        <Providers>
-        <MyNavbar/>
           
           {children}
         </Providers>

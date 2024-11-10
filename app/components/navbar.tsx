@@ -17,14 +17,14 @@ export default function MyNavbar() {
 
   const menuItems = [
     { label: "About", href: "./#about" },
-    { label: "Education", href: "./#education" },
+    { label: "Experience", href: "./#experience" },
     { label: "Projects", href: "/projects" },
     { label: "Statistics", href: "/stats" },
     { label: "Resume", href: "/resume" },
   ];
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} maxWidth="full"  className="px-5" >
+    <Navbar onMenuOpenChange={setIsMenuOpen} maxWidth="full" isBordered   className=" border-px-2 w-full" >
    
       <NavbarContent className="flex items-center justify-start  sm:w-auto">
         <NavbarMenuToggle
