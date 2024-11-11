@@ -34,7 +34,7 @@ export default function MyNavbar() {
         />
         <NavbarBrand className="ml-4"> 
           <Link href="./">
-          <Image src="/images/logo.png" alt="logo" width={190} height={190} />
+          <Image src="/images/logo2.png" alt="logo" width={170} height={170} />
           </Link>
         </NavbarBrand>
       </NavbarContent>
