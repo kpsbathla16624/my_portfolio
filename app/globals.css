@@ -13,9 +13,46 @@
     --foreground: #ededed;
   }
 }
+/* put bg image*/
+/* body {
+    color: var(--foreground);
+    
+    background-image: url('https://media.istockphoto.com/id/1155705365/vector/abstract-black-background-gradient-that-looks-modern.jpg?s=612x612&w=0&k=20&c=kNHfOPdB6TjbRagCcDd6kgZx5SbBEnaB4TL8Ru3zEaY=');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
 
+    font-family: Arial, Helvetica, sans-serif;
+  } */
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  
+  background: radial-gradient(
+        circle at top right,
+        rgba(255, 255, 255, 0.15),
+        rgba(255, 255, 255, 0.02) 80%,
+        transparent 90%
+      )
+      no-repeat,
+    #000000 ;
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  overflow: hidden;
+  color: #f0f0f0;
+  font-family: "Arial", sans-serif;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 10s linear infinite; /* Adjust the duration as desired */
 }

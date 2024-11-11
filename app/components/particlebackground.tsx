@@ -32,7 +32,7 @@ function Particlebackground() {
      
           background: {
             color: {
-              value: "#000000",
+              value: "transparent",
             },
           },
           fpsLimit: 120,
@@ -70,7 +70,7 @@ function Particlebackground() {
                 default: OutMode.out,
               },
               random: false,
-              speed: 6,
+              speed: 3,
               straight: false,
             },
             number: {
