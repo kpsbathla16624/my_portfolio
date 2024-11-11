@@ -20,7 +20,7 @@ export default function MyNavbar() {
     { label: "Experience", href: "./#experience" },
     { label: "Projects", href: "/projects" },
     { label: "Statistics", href: "/stats" },
-    { label: "Resume", href: "/resume" },
+    { label: "Resume", href: "/myresume" },
   ];
 
   return (
