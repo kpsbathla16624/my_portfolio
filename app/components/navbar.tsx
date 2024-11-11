@@ -11,6 +11,7 @@ import {
   Link,
 
 } from "@nextui-org/react";
+import Image from "next/image";
 
 export default function MyNavbar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -32,7 +33,9 @@ export default function MyNavbar() {
           className="sm:hidden"
         />
         <NavbarBrand className="ml-4"> 
-          <p className="font-bold text-inherit"><Link href="./">Kpsbathla</Link></p>
+          <Link href="./">
+          <Image src="/images/logo.png" alt="logo" width={190} height={190} />
+          </Link>
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent className="hidden sm:flex gap-20 justify-center flex-grow">
