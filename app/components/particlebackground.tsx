@@ -36,32 +36,32 @@ function Particlebackground() {
             },
           },
           fpsLimit: 120,
-          interactivity: {
-            events: {
+          // interactivity: {
+          //   events: {
            
-              onHover: {
-                enable: true,
-                mode: "repulse",
-              },
-            },
-            modes: {
+          //     onHover: {
+          //       enable: true,
+          //       mode: "repulse",
+          //     },
+          //   },
+          //   modes: {
               
-              repulse: {
-                distance: 200,
-                duration: 0.4,
-              },
-            },
-          },
+          //     repulse: {
+          //       distance: 200,
+          //       duration: 0.4,
+          //     },
+          //   },
+          // },
           particles: {
             color: {
               value: "#ffffff",
             },
             links: {
               color: "#ffffff",
-              distance: 150,
+              distance: 100,
               enable: true,
               opacity: 0.5,
-              width: 1,
+              width: 0.5,
             },
             move: {
               direction: MoveDirection.none,
@@ -77,16 +77,16 @@ function Particlebackground() {
               density: {
                 enable: true,
               },
-              value: 80,
+              value: 120,
             },
             opacity: {
-              value: 0.5,
+              value: 0.3,
             },
             shape: {
               type: "circle",
             },
             size: {
-              value: { min: 1, max: 5 },
+              value: { min: 1, max: 3 },
             },
           },
           detectRetina: true,

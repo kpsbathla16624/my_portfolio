@@ -6,14 +6,14 @@ function Photo() {
     <div className=" relative w-64 sm:w-64 md:w-72 lg:w-[350px] flex justify-center items-center aspect-square">
       {/* Outer rotating div */}
       <div
-        className="w-[110%] h-[110%] border-green-400 
-                   aspect-square absolute rounded-full border-l-[3px] border-opacity-50  overflow-hidden
-                   animate-spin-slow border-t-4 border-t-transparent " // Apply rotation animation here
+        className="w-[110%] h-[110%] border-primary 
+                   aspect-square absolute rounded-full border-l-[3px] border-opacity-80 animate-spin-slow  overflow-hidden
+                    border-t-4 border-t-transparent " // Apply rotation animation here
       ></div>
        <div
-        className="w-[110%] h-[110%] border-green-400 
-                   aspect-square absolute rounded-full border-r-[3px] border-opacity-50   overflow-hidden
-                   animate-spin-slow border-b-4 border-b-transparent" // Apply rotation animation here
+        className="w-[110%] h-[110%] border-primary
+                   aspect-square absolute rounded-full border-r-[3px] border-opacity-80 animate-spin-slow   overflow-hidden
+                    border-b-4 border-b-transparent" // Apply rotation animation here
       ></div>
       {/* Inner stationary div */}
       <div

@@ -5,6 +5,14 @@ import { Providers } from "./providers";
 import MyNavbar from "./components/navbar";
 import Particlebackground from "./components/particlebackground";
 
+import { Dancing_Script } from 'next/font/google';
+
+// Initialize the font with options like subsets and weight (optional)
+const dancingScript = Dancing_Script({
+  subsets: ['latin'], // Choose the subset(s) you need
+  weight: ['400', '700'], // Optional: specify font weights
+  variable: '--font-dancing-script', // Optional: specify a custom CSS variable 
+});
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -29,11 +37,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable}  antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${dancingScript.variable}  antialiased`}
         >
       
         <Providers>
-        <MyNavbar/>
+     
           <div className="-z-10">
           <Particlebackground/>
           </div>
