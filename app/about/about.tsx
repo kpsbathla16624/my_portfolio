@@ -2,7 +2,7 @@
 
 function About() {
   return (
-    <div className="w-full md:w-full lg:w-8/12  p-10 " id="about">
+    <div className="w-full min-h-screen md:w-full lg:w-8/12 md:p-10 text-justify " id="about">
       <div className="p-4">
         <h1 className="text-3xl font-bold mb-4">About Me</h1>
         <p className="text-xl font-mono font-bold">

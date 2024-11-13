@@ -3,7 +3,7 @@ import React from 'react';
 
 function Photo() {
   return (
-    <div className=" relative w-64 sm:w-64 md:w-72 lg:w-[350px] flex justify-center items-center aspect-square">
+    <div className=" relative w-64 sm:w-52 md:w-72 lg:w-[350px] flex justify-center items-center aspect-square">
       {/* Outer rotating div */}
       <div
         className="w-[110%] h-[110%] border-primary 

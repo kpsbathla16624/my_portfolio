@@ -6,6 +6,7 @@ import MyNavbar from "./components/navbar";
 import Particlebackground from "./components/particlebackground";
 
 import { Dancing_Script } from 'next/font/google';
+import BottomNavbar from "./components/bottomNavbar";
 
 // Initialize the font with options like subsets and weight (optional)
 const dancingScript = Dancing_Script({
@@ -45,9 +46,10 @@ export default function RootLayout({
           <div className="-z-10">
           <Particlebackground/>
           </div>
-          
+          {/* <MyNavbar/> */}
           {children}
         </Providers>
+        <BottomNavbar/>
       </body>
     </html>
   );
