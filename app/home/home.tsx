@@ -26,7 +26,7 @@ function Home() {
           </p>
 
           {/* Developer roles section */}
-          <div className='grid grid-cols-1 sm:grid-cols-2 items-center md:grid-cols-2 lg:grid-cols-3 gap-4 text-base sm:text-lg md:text-xl text-primary p-4'>
+          <div className='grid grid-cols-2 items-center  lg:grid-cols-3 gap-4 text-base sm:text-lg md:text-xl text-primary p-4'>
   <div className='flex space-x-2 justify-center items-center'>
     <FaReact className='text-xl sm:text-2xl md:text-3xl text-white' />
     <p className='mt-1 sm:mt-0 sm:ml-2'>Web Developer</p>
