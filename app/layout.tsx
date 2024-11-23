@@ -5,14 +5,20 @@ import { Providers } from "./providers";
 import MyNavbar from "./components/navbar";
 import Particlebackground from "./components/particlebackground";
 
-import { Dancing_Script } from 'next/font/google';
+import { Dancing_Script, Share_Tech_Mono } from 'next/font/google';
 import BottomNavbar from "./components/bottomNavbar";
 
-// Initialize the font with options like subsets and weight (optional)
+// add font Share Tech Mono from next google font
+const shareTechMono = Share_Tech_Mono({
+  subsets: ['latin'],
+  weight: ['400'],
+  variable: '--font-share-tech-mono',
+});
+
 const dancingScript = Dancing_Script({
-  subsets: ['latin'], // Choose the subset(s) you need
-  weight: ['400', '700'], // Optional: specify font weights
-  variable: '--font-dancing-script', // Optional: specify a custom CSS variable 
+  subsets: ['latin'], 
+  weight: ['400', '700'], 
+  variable: '--font-dancing-script',  
 });
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -38,7 +44,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${dancingScript.variable}  antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${dancingScript.variable} ${shareTechMono.variable} antialiased `}
         >
       
         <Providers>
