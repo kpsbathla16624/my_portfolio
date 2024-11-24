@@ -3,7 +3,7 @@ import React from 'react'
 
 function Experience() {
   return (
-    <div className='px-10 items-start'>
+    <div className='px-5 items-start'>
         <h1 className='py-10 text-4xl text-primary font-share-tech-mono'> My Experience</h1> 
         <ul className='list-disc text-white '>
             <li className='flex flex-col '> 
