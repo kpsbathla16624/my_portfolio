@@ -8,7 +8,7 @@ function Experience() {
         <ul className='list-disc text-white '>
             <li className='flex flex-col '> 
                 <div className='flex items-center space-x-4  '> 
-                    <Image src='/images/medoc.png' alt='medoc' className="rounded-lg h-min bg-white object-contain" width={50} height={50} />
+                   <a href="https://medochealth.in/" target='_blank'> <Image src='/images/medoc.png' alt='medoc'  className="rounded-lg h-min bg-white object-contain" width={50} height={50} /></a>
                     <div className='flex flex-col '>
                     <h1 className='text-lg font-bold font-serif'>Medoc Health IT Pvt. Ltd</h1>
                     <h1>Frontend Developer </h1>
