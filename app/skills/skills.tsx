@@ -125,7 +125,7 @@ function Skills() {
       </div>
 
       {/* Education and Experience Section */}
-      <div className="flex flex-col items-center lg:items-start space-y-10 w-full lg:w-[30%] mt-10 lg:mt-0">
+      <div className="flex flex-col items-start lg:items-start space-y-10 w-full lg:w-[30%] mt-10 lg:mt-0">
         <Education />
         <Experience />
       </div>

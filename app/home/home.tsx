@@ -8,7 +8,7 @@ import { SiCodeforces } from 'react-icons/si'
 
 function Home() {
   return (
-    <div className='min-h-screen w-full flex flex-col'>
+    <div className='min-h-screen w-full flex flex-col' id='home'>
       {/* Header section */}
       <div className='flex px-5 sm:px-10 md:px-20 pt-10 justify-center md:justify-end w-full items-center'>
         <Link href="./">

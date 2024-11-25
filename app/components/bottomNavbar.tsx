@@ -6,7 +6,7 @@ import { AiOutlineProject, AiOutlineBarChart } from 'react-icons/ai';
 import { BsFileEarmarkText } from 'react-icons/bs';
 import Link from 'next/link';
 import { GiSkills } from 'react-icons/gi';
-import { BiBrain } from 'react-icons/bi';
+import { BiBrain, BiPhone } from 'react-icons/bi';
 import { usePathname } from 'next/navigation';
 
 function BottomNavbar() {
@@ -19,12 +19,14 @@ function BottomNavbar() {
     };
 
     const buttons = [
-        { icon: <GoHome className='text-2xl' />, link: '/', label: 'Home' },
+        { icon: <GoHome className='text-2xl' />, link: '/#home', label: 'Home' },
         { icon: <MdOutlinePersonOutline className='text-2xl' />, link: '/#about', label: 'About' },
         { icon: <BiBrain className='text-2xl' />, link: '/#skills', label: 'Skills' },
+        { icon: <BiPhone  className='text-2xl' />, link: '/#contact', label: 'Contact' },
         { icon: <AiOutlineProject className='text-2xl' />, link: '/projects', label: 'Projects' },
         { icon: <AiOutlineBarChart className='text-2xl' />, link: '/stats', label: 'Stats' },
         { icon: <BsFileEarmarkText className='text-2xl' />, link: '/myresume', label: 'Resume' },
+        
     ];
 
     return (
