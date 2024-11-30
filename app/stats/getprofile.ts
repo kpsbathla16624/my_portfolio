@@ -8,7 +8,7 @@ export default async function getUserProfile(
   try {
     // Create an array to hold fetch promises for valid usernames
     const fetchPromises: Promise<Response>[] = [];
-    const host = "https://dsa-tracker-dashboard-hhgo.vercel.app"
+    const host = process.env.NEXT_PUBLIC_HOST  || ''; 
 
     // Push valid fetch requests to the array
     if (codeChefUsername) {

@@ -40,7 +40,7 @@ const QuestionCountGraph: React.FC = () => {
   if (!profiles) {
     // Shimmer loader
     return (
-      <div className="w-full max-w-[450px] h-[350px] flex flex-col items-center justify-center gap-2 p-4 border rounded-lg shadow-lg backdrop-blur-lg bg-opacity-75 bg-transparent bg-blur-xl">
+      <div className=" w-full  flex flex-col items-center justify-center gap-2 p-4 border rounded-lg shadow-lg backdrop-blur-lg bg-opacity-75 bg-transparent bg-blur-xl">
         <div className="animate-pulse flex flex-col items-center gap-4">
           {/* Title shimmer */}
           <div className="h-6 w-32 bg-gray-600 rounded-md"></div>
@@ -113,14 +113,14 @@ const QuestionCountGraph: React.FC = () => {
   };
 
   return (
-    <div className="w-full max-w-[350px] h-[300px] justify-evenly flex flex-col my-2 p-4 border rounded-lg shadow-lg backdrop-blur-lg bg-opacity-75 bg-transparent bg-blur-xl">
+    <div className="w-full  max-h-[300px] justify-evenly flex flex-col my-2 p-4 border rounded-xl shadow-lg backdrop-blur-lg bg-opacity-75 bg-transparent bg-blur-xl">
       <h1 className="text-white">
         Total Questions:{" "}
         {Number(profiles.codeForces.total) +
           Number(profiles.codeChef.total) +
           Number(profiles.leetCode.totalSolved)}
       </h1>
-      <Bar data={data} options={options} className="pb-3" />
+      <Bar data={data} options={options} className="pb-3 bg-transparent" />
     </div>
   );
 };
