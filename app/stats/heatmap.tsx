@@ -71,8 +71,7 @@ const HeatMap: React.FC<HeatMapProps> = ({ codechefId, codeforcesId, leetcodeId 
 
     return (
         <div className="w-full flex flex-col my-2 p-2 border rounded-xl shadow-lg bg-transparent">
-            <h2 className="text-center text-white">Combined Submissions</h2>
-            <h2 className="text-center pb-3 text-white">(from LeetCode, CodeForces, CodeChef)</h2>
+            <h2 className="text-start font-bold text-xl mb-1 text-white">Combined Submissions</h2>
             {loading ? (
                 <div className="animate-pulse">
                     <div className="w-full h-[200px] shimmer-effect"></div>
@@ -88,7 +87,7 @@ const HeatMap: React.FC<HeatMapProps> = ({ codechefId, codeforcesId, leetcodeId 
 
                         weekdayLabels={['S', 'M', 'T', 'W', 'T', 'F', 'S']}
                         classForValue={(value) => {
-                            console.log(value); // Debugging to verify the value
+                           
                             if (!value || value.count === 0) return 'color-empty'; // Assign CSS class for empty cells
                             if (value.count >= 1 && value.count <= 2) return 'color-scale-1';
                             if (value.count >= 3 && value.count <= 5) return 'color-scale-2';

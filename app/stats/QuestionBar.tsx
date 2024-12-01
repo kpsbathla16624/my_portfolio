@@ -113,7 +113,7 @@ const QuestionCountGraph: React.FC = () => {
   };
 
   return (
-    <div className="w-full  max-h-[300px] justify-evenly flex flex-col my-2 p-4 border rounded-xl shadow-lg backdrop-blur-lg bg-opacity-75 bg-transparent bg-blur-xl">
+    <div className="w-full  h-full justify-evenly flex flex-col my-2 p-4 border rounded-xl shadow-lg backdrop-blur-lg bg-opacity-75 bg-transparent bg-blur-xl">
       <h1 className="text-white">
         Total Questions:{" "}
         {Number(profiles.codeForces.total) +
