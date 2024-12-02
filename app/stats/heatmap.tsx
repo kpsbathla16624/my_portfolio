@@ -104,7 +104,7 @@ const HeatMap: React.FC<HeatMapProps> = ({ codechefId, codeforcesId, leetcodeId 
     const endDate = new Date();
 
     return (
-        <div className="w-full flex flex-col my-2 p-2 border rounded-xl shadow-lg bg-transparent">
+        <div className="w-full  flex flex-col  p-2 border border-white rounded-xl shadow-lg bg-transparent">
             <h2 className="text-start font-bold text-xl  text-white">Combined Submissions</h2>
             <h2 className="text-start font-bold text-md mb-1 text-white">(from LeetCode , Codeforces , Codechef)</h2>
             
