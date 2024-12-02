@@ -23,7 +23,7 @@ function RatingBox() {
     fetchProfiles();
   }, []);
 
-  async function GetLeetcodeContestData(userid: String) {
+  async function GetLeetcodeContestData(userid: string) {
     setLoading(true);
     const contestResponse = await fetch(
       `https://leetcodeapi-production.up.railway.app/${userid}/contest`
