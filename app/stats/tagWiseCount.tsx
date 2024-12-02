@@ -121,7 +121,7 @@ function LeetcodeTags() {
     <div className="h-full w-full p-2 border rounded-xl shadow-lg bg-transparent">
       <div className="flex justify-between items-center pb-2">
         <h1 className="font-bold text-xl">Tag Wise Question Count</h1>
-        <div className="flex space-x-6 items-center">
+        <div className="flex flex-wrap space-x-6 items-center">
           <button
             className={`px-4 py-2 rounded-md ${
               activeTab === "Codeforces"
