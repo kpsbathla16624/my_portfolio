@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { Doughnut, Pie } from "react-chartjs-2";
+import { Doughnut } from "react-chartjs-2";
 import {
   Chart as ChartJS,
   ArcElement,
@@ -20,36 +20,44 @@ function LeetcodeTags() {
     "LeetCode"
   );
   const [viewType, setViewType] = useState<"Cards" | "Pie Chart">("Pie Chart");
+  const [loading, setLoading] = useState(true); // Loading state
 
   const host = process.env.NEXT_PUBLIC_HOST || "";
 
   async function getData() {
-    const profileResponse = await fetch(
-      `${host}/api/codeforces/getcodeforcesProfile?username=kpsbathla`
-    );
-    if (profileResponse.ok) {
-      const profileData = await profileResponse.json();
-      setCfTagCounts(profileData.tagcount || {});
-    }
+    setLoading(true);
+    try {
+      const profileResponse = await fetch(
+        `${host}/api/codeforces/getcodeforcesProfile?username=kpsbathla`
+      );
+      if (profileResponse.ok) {
+        const profileData = await profileResponse.json();
+        setCfTagCounts(profileData.tagcount || {});
+      }
 
-    const leetcodeResponse = await fetch(
-      `https://leetcodeapi-production.up.railway.app/skillStats/kamalpreet6198`
-    );
-    if (leetcodeResponse.ok) {
-      const leetcodeData = await leetcodeResponse.json();
-      const allTags = [
-        ...leetcodeData.data.matchedUser.tagProblemCounts.fundamental,
-        ...leetcodeData.data.matchedUser.tagProblemCounts.intermediate,
-        ...leetcodeData.data.matchedUser.tagProblemCounts.advanced,
-      ];
+      const leetcodeResponse = await fetch(
+        `https://leetcodeapi-production.up.railway.app/skillStats/kamalpreet6198`
+      );
+      if (leetcodeResponse.ok) {
+        const leetcodeData = await leetcodeResponse.json();
+        const allTags = [
+          ...leetcodeData.data.matchedUser.tagProblemCounts.fundamental,
+          ...leetcodeData.data.matchedUser.tagProblemCounts.intermediate,
+          ...leetcodeData.data.matchedUser.tagProblemCounts.advanced,
+        ];
 
-      const leetcodeTagCounts: Record<string, number> = {};
-      allTags.forEach((tag: { tagName: string; problemsSolved: number }) => {
-        leetcodeTagCounts[tag.tagName] = tag.problemsSolved;
-      });
+        const leetcodeTagCounts: Record<string, number> = {};
+        allTags.forEach((tag: { tagName: string; problemsSolved: number }) => {
+          leetcodeTagCounts[tag.tagName] = tag.problemsSolved;
+        });
 
-      setLcTagCounts(leetcodeTagCounts);
-      setTagData(leetcodeTagCounts);
+        setLcTagCounts(leetcodeTagCounts);
+        setTagData(leetcodeTagCounts);
+      }
+    } catch (error) {
+      console.error("Error fetching tag data:", error);
+    } finally {
+      setLoading(false);
     }
   }
 
@@ -87,9 +95,9 @@ function LeetcodeTags() {
     maintainAspectRatio: false,
     plugins: {
       legend: {
-        position: "right" as const, // Position legend on the right
+        position: "right" as const,
         labels: {
-          usePointStyle: true, // Use points instead of rectangles
+          usePointStyle: true,
         },
       },
       tooltip: {
@@ -110,7 +118,7 @@ function LeetcodeTags() {
   };
 
   return (
-    <div className=" h-full w-full p-2 border rounded-xl shadow-lg bg-transparent">
+    <div className="h-full w-full p-2 border rounded-xl shadow-lg bg-transparent">
       <div className="flex justify-between items-center pb-2">
         <h1 className="font-bold text-xl">Tag Wise Question Count</h1>
         <div className="flex space-x-6 items-center">
@@ -143,7 +151,9 @@ function LeetcodeTags() {
           <select
             className="px-4 py-2 rounded-md bg-gray-700 text-gray-200"
             value={viewType}
-            onChange={(e) => setViewType(e.target.value as "Cards" | "Pie Chart")}
+            onChange={(e) =>
+              setViewType(e.target.value as "Cards" | "Pie Chart")
+            }
           >
             <option value="Cards">Cards</option>
             <option value="Pie Chart">Pie Chart</option>
@@ -151,22 +161,28 @@ function LeetcodeTags() {
         </div>
       </div>
       <hr className="mb-2" />
-      <div className="flex flex-wrap">
-        {viewType === "Cards" ? (
-          Object.entries(tagData).map(([tag, count]) => (
-            <TagComponent key={tag} tag={tag} count={count} />
-          ))
-        ) : (
-          <div className="w-full  flex justify-center items-center">
-             <Doughnut 
-            data={pieChartData} 
-            options={pieChartOptions}
-          
-            height={220} 
-          />
-          </div>
-        )}
-      </div>
+      {loading ? (
+       
+         
+            <div
+            
+              className="w-full h-4/5 animate-pulse rounded-md shimmer-effect bg-gray-700"
+            ></div>
+       
+       
+      ) : (
+        <div className="flex flex-wrap">
+          {viewType === "Cards" ? (
+            Object.entries(tagData).map(([tag, count]) => (
+              <TagComponent key={tag} tag={tag} count={count} />
+            ))
+          ) : (
+            <div className="w-full flex justify-center items-center">
+              <Doughnut data={pieChartData} options={pieChartOptions} height={220} />
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 }

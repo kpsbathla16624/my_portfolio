@@ -2,7 +2,7 @@ import React from 'react';
 import QuestionCountGraph from './QuestionBar';
 import GitHubCalendar from "react-github-calendar";
 import HeatMap from './heatmap';
-import LeetcodeTags from './leetcodeTags';
+import LeetcodeTags from './tagWiseCount';
 import GithubStats from './githubStats';
 
 function StatsPage() {
@@ -18,7 +18,7 @@ function StatsPage() {
         <div className=' col-span-7 row-span-3  xl:col-span-5  items-center justify-center flex flex-col '>
           <LeetcodeTags/>
         </div>
-        <div className='col-span-6 row-span-2 items-center justify-center flex flex-col  bg-transparent'>
+        <div className='col-span-6 row-span-3 items-center justify-center flex flex-col  bg-transparent'>
           <HeatMap codechefId='kps_bathla' codeforcesId='kpsbathla' leetcodeId='kamalpreet6198' />
         </div>
         <div className='col-span-6  row-span-2  border border-white space-y-2 flex flex-col w-min h-min p-2 rounded-xl'>
