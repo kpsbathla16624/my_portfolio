@@ -91,7 +91,7 @@ const HeatMap: React.FC<HeatMapProps> = ({ codechefId, codeforcesId, leetcodeId 
         // Check for ongoing streak
         const today = new Date();
         const lastEntryDate = sortedData.length ? new Date(sortedData[sortedData.length - 1].date) : null;
-        if (lastEntryDate && differenceInDays(today, lastEntryDate) === 0) {
+        if (lastEntryDate && differenceInDays(today, lastEntryDate) === 0 || lastEntryDate && differenceInDays(today, lastEntryDate) === 1) {
             setCurrentStreak(currentStreak);
         } else {
             setCurrentStreak(0);
