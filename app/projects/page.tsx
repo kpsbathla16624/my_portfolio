@@ -87,6 +87,25 @@ function ProjectsPage() {
               hostedLink="https://github.com/kpsbathla16624/e-commerce-Backend"
             />
           </SwiperSlide>
+          <SwiperSlide>
+            <ProjectComponent
+              imagelink="/images/resumeBuilder.png"
+              projectName="Resume Builder"
+              projectDescription="
+              Developed a web application to create and download resumes using Next.js, enabling users to generate professional resumes with ease.
+              Implemented a user-friendly interface for seamless resume creation, enhancing user experience.
+              AI generated summary of the resume, making it easier for the user to get a quick overview of the resume."
+              techUsed={[
+                "Next.js",
+                "React",
+                "Tailwind CSS",
+                "gemini api",
+              ]}
+             
+              githubLink="https://github.com/kpsbathla16624/resume_builder_app"
+              hostedLink="https://resume-builder-kps.vercel.app/"
+            />
+          </SwiperSlide>
 
           {/* Add more SwiperSlide components here for additional projects */}
         </Swiper>
