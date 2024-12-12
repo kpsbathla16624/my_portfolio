@@ -48,7 +48,7 @@ function ProjectsPage() {
                 "vercel",
               ]}
               githubLink="https://github.com/kpsbathla16624/dsa__tracker_dashboard"
-              hostedLink="https://dsa-tracker-dashboard-4ctx.vercel.app/"
+              hostedLink="https://dsatrackerkps.vercel.app/"
             />
           </SwiperSlide>
           <SwiperSlide>
