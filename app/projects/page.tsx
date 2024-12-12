@@ -103,7 +103,7 @@ function ProjectsPage() {
               ]}
              
               githubLink="https://github.com/kpsbathla16624/resume_builder_app"
-              hostedLink="https://resume-builder-kps.vercel.app/"
+              hostedLink="https://resumebuilderkps.vercel.app/"
             />
           </SwiperSlide>
 
