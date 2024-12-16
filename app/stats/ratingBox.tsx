@@ -26,7 +26,7 @@ function RatingBox() {
   async function GetLeetcodeContestData(userid: string) {
     setLoading(true);
     const contestResponse = await fetch(
-      `https://leetcodeapi-production.up.railway.app/${userid}/contest`
+      `https://leetcodeapi-pzsr.onrender.com/${userid}/contest`
     );
     if (contestResponse.ok) {
       const contestdata = await contestResponse.json();

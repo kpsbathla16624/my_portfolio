@@ -36,7 +36,7 @@ function LeetcodeTags() {
       }
 
       const leetcodeResponse = await fetch(
-        `https://leetcodeapi-production.up.railway.app/skillStats/kamalpreet6198`
+        `https://leetcodeapi-pzsr.onrender.com/skillStats/kamalpreet6198`
       );
       if (leetcodeResponse.ok) {
         const leetcodeData = await leetcodeResponse.json();
