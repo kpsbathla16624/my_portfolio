@@ -26,7 +26,7 @@ function RatingBox() {
   async function GetLeetcodeContestData(userid: string) {
     setLoading(true);
     const contestResponse = await fetch(
-      `https://enchanting-freedom-production.up.railway.app/${userid}/contest`
+      `https://leetcodeapi-bolt.vercel.app/${userid}/contest`
     );
     if (contestResponse.ok) {
       const contestdata = await contestResponse.json();

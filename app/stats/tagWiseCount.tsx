@@ -36,7 +36,7 @@ function LeetcodeTags() {
       }
 
       const leetcodeResponse = await fetch(
-        `https://enchanting-freedom-production.up.railway.app/skillStats/kamalpreet6198`
+        `https://leetcodeapi-bolt.vercel.app/skillStats/kamalpreet6198`
       );
       if (leetcodeResponse.ok) {
         const leetcodeData = await leetcodeResponse.json();
