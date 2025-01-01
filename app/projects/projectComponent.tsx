@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import React from "react";
 import { FaGithub } from "react-icons/fa";
 import { TbWorld } from "react-icons/tb";
@@ -27,7 +27,7 @@ function ProjectComponent({
         <Image
           src={imagelink}
           alt={projectName}
-          fill={true}
+          layout="fill"
           objectFit="cover"
           className="rounded-t-xl hover:scale-105 transition-transform duration-300"
         />
