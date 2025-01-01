@@ -20,7 +20,7 @@ function Photo() {
         className="w-full h-full aspect-square absolute rounded-full border-2 border-white  overflow-hidden flex items-center justify-center"
       >
         <Image
-          src="/images/profile.jpg"
+          src="/images/p.jpg"
           alt="Picture of the author"
           layout="intrinsic"
           width={512}
