@@ -100,8 +100,9 @@ const HeatMap: React.FC<HeatMapProps> = ({ codechefId, codeforcesId, leetcodeId 
         setMaxStreak(maxStreak);
     };
 
-    const startDate = new Date(new Date().getFullYear(), 0, 1);
-    const endDate = new Date();
+    const endDate = new Date(); // Today's date
+    const startDate = new Date(); // Start with today's date
+    startDate.setFullYear(startDate.getFullYear() - 1); // Go back exactly 1 year
 
     return (
         <div className="w-full  flex flex-col  p-2 border border-white rounded-xl shadow-lg bg-transparent">
