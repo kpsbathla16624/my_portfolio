@@ -2,13 +2,13 @@
 import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import {
-  type Container,
   Engine,
   type ISourceOptions,
   MoveDirection,
   OutMode,
 } from "@tsparticles/engine";
-import { loadFull } from 'tsparticles';
+import { loadFull } from "tsparticles";
+
 import React from 'react'
 
 
@@ -18,7 +18,7 @@ function Particlebackground() {
     useEffect(() => {
         initParticlesEngine(async (engine:Engine) => {
         
-          await loadFull(engine);
+          await loadFull (engine);
           
         }).then(() => {
           setInit(true);
