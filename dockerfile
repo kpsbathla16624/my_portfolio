@@ -32,7 +32,7 @@ COPY --from=builder /app ./
 RUN npm install --only=production
 
 # Expose the port Next.js runs on
-EXPOSE 5000
+EXPOSE 3000
 
 # Start the Next.js application
 CMD ["npm", "run", "start"]
