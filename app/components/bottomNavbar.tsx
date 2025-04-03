@@ -30,7 +30,7 @@ function BottomNavbar() {
     ];
 
     return (
-        <div className=' hidden  z-50 fixed bottom-5 left-0 right-0 w-full md:flex justify-center items-center'>
+        <div className='   z-50 fixed bottom-5 left-0 right-0 w-full flex justify-center items-center'>
             <div className='flex justify-center items-center space-x-3 bg-black border-2 border-white px-5 py-2 rounded-full'>
                 {buttons.map((button, index) => (
                     <Link href={button.link} key={index}>
