@@ -7,7 +7,7 @@ function ResumePage() {
           My Resume
         </h1>
       <iframe 
-        src="/Kamal_preet_resume.pdf" 
+        src="/Resume-Kamal.pdf" 
         className="w-5/6 h-[100vh]" 
         title="Resume"
         
